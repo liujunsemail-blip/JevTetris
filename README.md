@@ -13,6 +13,11 @@ With no valid API key configured, the game automatically falls back to the
 local heuristic, so it runs out of the box with no setup beyond Python.
 
 See [`DESIGN.md`](DESIGN.md) for the full design and architecture.
+## Demo
+
+
+https://github.com/user-attachments/assets/e89df3c8-d802-4580-9655-03579a90e540
+
 
 ## Table of Contents
 

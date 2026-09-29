@@ -14,9 +14,12 @@ local heuristic, so it runs out of the box with no setup beyond Python.
 
 See [`DESIGN.md`](DESIGN.md) for the full design and architecture.
 ## Demo
-
-
+### Jev
 https://github.com/user-attachments/assets/e89df3c8-d802-4580-9655-03579a90e540
+
+### gpt-6-luna
+https://github.com/user-attachments/assets/47a768ad-7b8e-4f19-b22a-0c03ff02ae56
+
 
 
 ## Table of Contents

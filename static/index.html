@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tetris</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1 class="logo" data-i18n="app.title">TETRIS</h1>
+      <div class="topbar-controls">
+        <label class="select-group">
+          <span class="select-label" data-i18n="label.language">Language</span>
+          <select id="language">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+        <label class="select-group">
+          <span class="select-label" data-i18n="label.mode">Mode</span>
+          <select id="mode">
+            <option value="ai">AI</option>
+            <option value="human">Human</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- Left info column -->
+      <aside class="info">
+        <div class="stat">
+          <span class="stat-label" data-i18n="label.score">SCORE</span>
+          <span class="stat-value" id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label" data-i18n="label.best">BEST</span>
+          <span class="stat-value" id="best">0</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label" data-i18n="label.lines">LINES</span>
+          <span class="stat-value" id="lines">0</span>
+        </div>
+
+        <div class="next-box">
+          <span class="stat-label" data-i18n="label.next">NEXT</span>
+          <canvas id="next" width="130" height="104"></canvas>
+        </div>
+
+        <div class="speed-box">
+          <span class="stat-label"><span data-i18n="label.speed">SPEED</span> <em id="speed-value">Lv 5</em></span>
+          <input type="range" id="speed" min="1" max="10" value="5" />
+        </div>
+      </aside>
+
+      <!-- Center game area -->
+      <section class="game-area">
+        <canvas id="board" width="380" height="760"></canvas>
+        <div class="controls">
+          <button id="btn-start" class="btn primary" data-i18n="btn.start">Start</button>
+          <button id="btn-pause" class="btn" data-i18n="btn.pause">Pause</button>
+          <button id="btn-reset" class="btn" data-i18n="btn.reset">Reset</button>
+        </div>
+        <p class="hint" id="hint" data-i18n="hint.controls">← → move · ↑ rotate · ↓ soft drop · Space hard drop · P pause</p>
+      </section>
+
+      <!-- Right AI decision panel (shown only in AI mode) -->
+      <aside class="ai-panel" id="ai-panel">
+        <div class="ai-panel-header">
+          <span class="stat-label" data-i18n="panel.title">AI DECISIONS</span>
+          <span class="source-badge" id="source-badge">—</span>
+        </div>
+        <div class="ai-log" id="ai-log"></div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/tetromino.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/ai_controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
